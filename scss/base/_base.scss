@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
@@ -10,6 +12,7 @@ body {
     font-size: 1.6rem;
     font-family: Gordita, sans-serif;
     color: var(--text-color);
+    background: var(--body-bg-color);
 }
 
 a {
@@ -23,11 +26,14 @@ button {
     background: transparent;
 }
 
-button, input, select,textarea {
+button,
+input,
+select,
+textarea {
     font-family: inherit;
     color: inherit;
 }
 
 .icon {
-    filter: var(--icon-color)
+    filter: var(--icon-color);
 }
