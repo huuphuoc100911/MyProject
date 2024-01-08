@@ -1141,6 +1141,16 @@ html.dark {
 .header {
   background: var(--header-bg-color);
 }
+@media (max-width: 991.98px) {
+  .header {
+    width: 100px;
+  }
+}
+@media (max-width: 575.98px) {
+  .header {
+    width: 50px;
+  }
+}
 
 .top-bar {
   padding: 30px 0;
@@ -1191,7 +1201,7 @@ html.dark {
 .top-act__separate {
   width: 1px;
   height: 30px;
-  background: #EDEDF6;
+  background: #ededf6;
 }
 .top-act__avatar {
   display: block;
