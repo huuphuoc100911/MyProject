@@ -1,0 +1,155 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 50px;
+    padding: 50px 0;
+    background: var(--footer-bg-color);
+    font-size: 1.4rem;
+
+    &__inner {
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1.2fr 1fr 1fr 1.5fr;
+        gap: 50px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__col:first-child {
+        width: 100%;
+
+        @include abstracts.screen(lg) {
+            width: 60%;
+        }
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
+
+    &__desc {
+        margin-top: 30px;
+        line-height: 1.3;
+    }
+
+    &__help-text {
+        margin-top: 30px;
+        font-size: 1.5rem;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__link,
+    &__text {
+        padding: 8px 0;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    &__text,
+    &__copyright {
+        color: var(--footer-text-color);
+    }
+
+    &__link {
+        display: inline-block;
+
+        &:hover {
+            color: #0071dc;
+            text-decoration: underline;
+        }
+    }
+
+    &__label {
+        margin-top: 20px;
+        font-weight: 500;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 0;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__input {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        &::placeholder {
+            font-weight: 400;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__btn-send {
+        height: 38px !important;
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+        }
+
+        @include abstracts.screen(lg) {
+            width: auto;
+        }
+    }
+
+    &__bottom {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        &-icon {
+            filter: var(--icon-color);
+        }
+    }
+}
