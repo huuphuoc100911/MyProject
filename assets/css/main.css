@@ -2618,8 +2618,7 @@ html.dark {
   }
 }
 .auth__intro-img {
-  width: var(--width);
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .auth__content {
   background: var(--auth-content-bg);
