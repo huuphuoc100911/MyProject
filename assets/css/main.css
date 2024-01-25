@@ -1242,6 +1242,8 @@ html {
   --top-act-group-shadow-color: rgba(237, 237, 246, 0.2);
   --footer-bg-color: var(--header-bg-color);
   --footer-text-color: #6e6d74;
+  --social-color: brightness(0) saturate(100%) invert(0%) sepia(17%) saturate(10%) hue-rotate(318deg) brightness(104%)
+      contrast(100%);
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
@@ -1280,6 +1282,7 @@ html.dark {
   --footer-text-color: #9e9da6;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow-color: rgba(0, 0, 0, 0.2);
+  --social-color: var(--icon-color);
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(14%) sepia(4%) saturate(4131%) hue-rotate(186deg)
@@ -1669,7 +1672,7 @@ html.dark {
   border-radius: 50%;
 }
 .footer__social-icon {
-  filter: var(--icon-color);
+  filter: var(--social-color);
 }
 
 .logo {
