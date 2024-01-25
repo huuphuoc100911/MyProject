@@ -171,6 +171,14 @@
         margin-left: 0;
     }
 
+    @include abstracts.screen(md) {
+        &__sign-up {
+            height: 40px !important;
+            padding: 0 8px !important;
+            font-size: 1.5rem !important;
+        }
+    }
+
     &__group {
         display: flex;
         align-items: center;
