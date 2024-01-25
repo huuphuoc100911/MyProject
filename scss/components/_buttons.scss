@@ -39,6 +39,10 @@
 
 // Buttons
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     padding: 0 20px;
     font-size: 1.8rem;
     font-weight: 500;
@@ -48,12 +52,14 @@
     user-select: none;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
         background: transparent;
-        color: #9e9da8;
+        color: var(--text-second-color);
         font-weight: 400;
     }
 
