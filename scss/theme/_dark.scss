@@ -52,6 +52,11 @@ html.dark {
     --filter-form-arrow: var(--dropdown-arrow-color);
 
     // Auth
+    --auth-intro-bg: #171c28;
     --auth-content-bg: #292e39;
-    --text-second-color: #b9babe;
+    --text-second-color: #9e9da8;
+
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #171c28;
+    }
 }
