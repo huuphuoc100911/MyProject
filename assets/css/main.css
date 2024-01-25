@@ -86,6 +86,7 @@ a,
 img,
 button,
 input,
+label,
 select,
 textarea {
   padding: 0;
@@ -1337,6 +1338,15 @@ html.dark {
     padding: 20px 0;
     justify-content: space-between;
   }
+  .top-bar__logo {
+    gap: 10px !important;
+  }
+  .top-bar__logo-img {
+    width: 24px;
+  }
+  .top-bar__logo-title {
+    font-size: 1.8rem !important;
+  }
 }
 @media (max-width: 575.98px) {
   .top-bar {
@@ -1691,26 +1701,11 @@ html.dark {
   align-items: center;
   gap: 14px;
 }
-@media (max-width: 991.98px) {
-  .logo {
-    gap: 10px;
-  }
-}
 .logo__title {
   color: var(--primary-color);
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.45;
-}
-@media (max-width: 991.98px) {
-  .logo__title {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .logo__img {
-    width: 24px;
-  }
 }
 
 .dropdown {
@@ -2407,13 +2402,18 @@ html.dark {
 .form__group {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group--inline {
   display: flex;
   align-items: center;
 }
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
-  border-color: red;
-  background: rgba(255, 0, 0, 0.1);
+  border-color: #ed4337;
+  background: rgba(237, 67, 55, 0.1);
 }
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
@@ -2432,6 +2432,11 @@ html.dark {
 }
 .form__text-input:focus-within {
   border-color: #77dea6;
+}
+@media (max-width: 767.98px) {
+  .form__text-input {
+    height: 48px;
+  }
 }
 .form__input {
   flex: 1;
@@ -2456,7 +2461,7 @@ html.dark {
   text-align: left;
   font-size: 1.4rem;
   font-weight: 500;
-  color: red;
+  color: #ed4337;
 }
 .form__checkbox {
   position: relative;
@@ -2470,6 +2475,11 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 767.98px) {
+  .form__checkbox-label {
+    font-size: 1.4rem;
+  }
 }
 .form__checkbox::before, .form__checkbox::after {
   content: "";
@@ -2535,6 +2545,11 @@ html.dark {
   display: flex;
   min-height: 100vh;
 }
+@supports (-webkit-touch-callout: none) {
+  .auth {
+    min-height: -webkit-fill-available;
+  }
+}
 .auth__intro, .auth__content {
   flex: 1;
   padding: 0 30px;
@@ -2570,6 +2585,11 @@ html.dark {
   font-weight: 500;
   line-height: 1.44;
 }
+@media (max-width: 767.98px) {
+  .auth__intro-text {
+    font-size: 1.5rem;
+  }
+}
 .auth__intro-img {
   width: 100%;
 }
@@ -2603,6 +2623,11 @@ html.dark {
   font-weight: 500;
   line-height: 1.47;
 }
+@media (max-width: 767.98px) {
+  .auth__heading {
+    font-size: 2.2rem;
+  }
+}
 .auth__desc {
   margin-top: 10px;
   padding: 0 30px;
@@ -2611,15 +2636,30 @@ html.dark {
   font-weight: 500;
   line-height: 1.47;
 }
+@media (max-width: 767.98px) {
+  .auth__desc {
+    font-size: 1.4rem;
+  }
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .auth__form {
+    margin-top: 10px;
+  }
 }
 .auth__link {
   color: #0071dc;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 767.98px) {
+  .auth__link {
+    font-size: 1.4rem;
+  }
 }
 .auth__btn-group {
   display: flex;
