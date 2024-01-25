@@ -11,6 +11,8 @@ html {
     --top-act-group-shadow-color: rgba(237, 237, 246, 0.2);
     --footer-bg-color: var(--header-bg-color);
     --footer-text-color: #6e6d74;
+    --social-color: brightness(0) saturate(100%) invert(0%) sepia(17%) saturate(10%) hue-rotate(318deg) brightness(104%)
+        contrast(100%);
 
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
