@@ -1,4 +1,5 @@
 @use "../abstracts";
+
 html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(107deg) brightness(102%)
@@ -59,4 +60,9 @@ html.dark {
     @include abstracts.screen(md) {
         --auth-intro-bg: #171c28;
     }
+
+    // Product Detail
+    --product-detail-bg: #292e39;
+    --breadcrumbs-bg: #171c28;
+    --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 }
